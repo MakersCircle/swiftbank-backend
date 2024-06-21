@@ -4,4 +4,4 @@
 
 .PHONY: runserver
 runserver:
-	poetry run python manage.py runserver
+	poetry run python -m swiftbank.manage runserver
