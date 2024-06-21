@@ -5,3 +5,12 @@
 .PHONY: runserver
 runserver:
 	poetry run python -m swiftbank.manage runserver
+
+
+.PHONY: precommit
+precommit:
+	poetry run pre-commit run --all-files
+
+.PHONY: pre-commit-reinstall
+pre-commit-reinstall:
+	poetry run pre-commit uninstall; poetry run pre-commit install
