@@ -7,7 +7,7 @@ from decouple import config as decouple_config
 SECRET_KEY = decouple_config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = decouple_config('DEBUG')
+DEBUG = decouple_config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = [decouple_config('ALLOWED_HOSTS')]
 
